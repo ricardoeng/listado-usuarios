@@ -1,5 +1,5 @@
 # Proyecto - Lista de Usuarios
-Esta aplicación web es un mini proyecto desarrollado en PHP v8.0.30 usando Slim Framework para el consumo de una API Externa (reqres.in) y desplegar la data en pantalla.
+Esta aplicación web es un proyecto desarrollado en PHP v8.0.30 usando Slim Framework para el consumo de una API Externa (reqres.in) y desplegar la data en pantalla.
 
 ## Herramientas utilizadas
 - PHP 8.0.30
@@ -8,7 +8,6 @@ Esta aplicación web es un mini proyecto desarrollado en PHP v8.0.30 usando Slim
 - jQuery 3.7.1
 
 ## Funcionalidades
-
 - Listado en pantalla de usuarios desde API externa.
 - Paginación y ordenamiento de usuarios (ascendente, descendente).
 - Búsqueda de usuarios por nombre y correo.
@@ -23,7 +22,7 @@ git clone https://github.com/ricardoeng/listado-usuarios.git
 composer install
 
 3. Arranque servidor PHP:
-php -S localthost:8080 -t public
+php -S localhost:8080 -t public
 
 4. Ver aplicativo:
 abrir en navegador http://localhost:8080/index.html
