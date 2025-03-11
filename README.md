@@ -17,7 +17,7 @@ Esta aplicación web es un mini proyecto desarrollado en PHP v8.0.30 usando Slim
 
 ## Instalación y Configuración
 1. Clonar el repositorio:  
-git clone https://github.com/rnorambuena/lista_usuarios.git
+git clone https://github.com/ricardoeng/listado-usuarios.git
 
 2. Instalar dependencias con composer:
 composer install
