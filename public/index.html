@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://d-solutions.cl/wp-content/uploads/2023/11/cropped-Sin-titulo-32x32.png" sizes="32x32">
+    <title>Lista de Usuarios DS</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Lista de Usuarios</h1>
+
+        <div id="loader" class="text-center" style="display: none;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Buscar por nombre o correo..." onkeyup="buscarUsuarios()">
+        </div>
+        
+        <div class="mb-12">
+            <button class="btn btn-success" onclick="exportarCSV()">Exportar a CSV</button>
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th onclick="ordenarUsuarios('id')">Id <span id="sort-id"></span></th>
+                    <th onclick="ordenarUsuarios('name')">Nombre <span id="sort-name"></span></th>
+                    <th onclick="ordenarUsuarios('email')">Correo <span id="sort-email"></span></th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody"></tbody>
+        </table>
+
+        <div class="d-flex justify-content-center">
+            <nav>
+                <ul class="pagination">
+                    <li class="page-item">
+                        <button class="page-link" id="prevPage">Anterior</button>
+                    </li>
+                    <li class="page-item">
+                        <button class="page-link" id="nextPage">Siguiente</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+    </div>
+
+    <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalLabel">Detalles del Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img id="modalAvatar" src="" alt="Avatar" class="rounded-circle" width="100">
+                    </div>
+                    <p><strong>Id:</strong> <span id="modalId"></span></p>
+                    <p><strong>Nombre:</strong> <span id="modalName"></span></p>
+                    <p><strong>Correo:</strong> <span id="modalEmail"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

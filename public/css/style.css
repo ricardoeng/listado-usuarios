@@ -1,0 +1,69 @@
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    color: #343a40;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.table th {
+    background-color: #67119A;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table tr {
+    cursor: pointer;
+} 
+
+.rounded-circle {
+    border: 2px solid #67119A;
+    transition: transform 0.2s ease;
+}
+
+.rounded-circle:hover {
+    transform: scale(1.2);
+}
+
+.pagination .page-link {
+    background-color: #67119A;
+    color: #ffffff;
+    border-radius: 8px;
+    margin: 0 4px;
+    transition: background-color 0.2s ease;
+    border: none;
+}
+
+.pagination .page-link:hover {
+    background-color: #67119A;
+}
+
+#loader {
+    margin-top: 20px;
+}
+
+.container .mb-12 {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.text-primary {
+    color: #67119A !important;
+}
