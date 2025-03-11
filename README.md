@@ -27,6 +27,9 @@ php -S localhost:8080 -t public
 4. Ver aplicativo:
 abrir en navegador http://localhost:8080/index.html
 
+## Validación de Endpoint API externa
+- En el navegador abrir la siguiente url: http://localhost:8080/listaUsuarios
+  
 ## Créditos
 - Developer: Ricardo Norambuena
 
